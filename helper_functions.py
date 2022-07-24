@@ -39,4 +39,4 @@ def generate_playlist(name, tracks):
     ## Add the tracks
     sp.user_playlist_add_tracks(id, pl_id, tracks)
 
-    return pl_obj['href']
+    return pl_obj['external_urls']['spotify']
