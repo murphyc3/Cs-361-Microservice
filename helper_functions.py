@@ -1,4 +1,3 @@
-from spotipy.oauth2 import SpotifyClientCredentials
 import spotipy
 from dotenv import dotenv_values
 config = dotenv_values(".env")
@@ -20,27 +19,24 @@ def generate_playlist(name, tracks):
         scope='playlist-modify-public',
         client_id=MY_CLIENT_ID,
         client_secret=MY_CLIENT_SECRET,
-        redirect_uri="http://localhost/"
+        redirect_uri="http://localhost:8888/callback"
     )
 
     ## Create an instance of the client
-    sp = spotipy.Spotify(token=token)
+    sp = spotipy.Spotify(auth=token)
+
+    # sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(client_id=MY_CLIENT_ID, client_secret=MY_CLIENT_SECRET))
 
     ## Get my User ID
     id = sp.current_user()['id']
 
     ## Create the playlist
-    pl_id = sp.user_playlist_create(id, name)['id']
+    pl_obj = sp.user_playlist_create(id, name)
+
+    ## Get the playlist id
+    pl_id = pl_obj['id']
 
     ## Add the tracks
     sp.user_playlist_add_tracks(id, pl_id, tracks)
 
-
-tracks = [
-    'https://open.spotify.com/track/29SRvYOKbMLOZeOubNGtLb?si=6zQovSBmSA6J7GkcmEStJw',
-    'https://open.spotify.com/track/6iX1f3r7oUJnMbGgQ2gx1j?si=3vRLva2_QyO9mq-SVLfchQ'
-]
-
-name = 'Test PL'
-
-generate_playlist(name, tracks)
+    return pl_obj['href']
