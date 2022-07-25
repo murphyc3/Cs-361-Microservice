@@ -1,7 +1,6 @@
-# Cs-361-Microservice
-## Spotify Playlist Creator
+# Spotify Playlist Creator Microservice
 
-Note thae the user **must connect to OSU VPN** in order to navigate to the URL to user the microservice.
+Note that the user **must connect to OSU VPN** in order to navigate to the URL to user the microservice.
 
 ### How To Request Data
 As stated above, make sure you are connected to the VPN.
