@@ -70,3 +70,7 @@ json_response = response.json()
 ## Get the url
 url = json_response['link']
 ```
+
+### Microservice UML Sequence Diagram
+
+![UML Sequence Diagram](microserviceUML.JPG)
