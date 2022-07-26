@@ -19,7 +19,7 @@ def generate_playlist(name, tracks):
         scope='playlist-modify-public',
         client_id=MY_CLIENT_ID,
         client_secret=MY_CLIENT_SECRET,
-        redirect_uri="http://localhost:8888/callback"
+        redirect_uri="http://flip3.engr.oregonstate.edu:9234/callback"
     )
 
     ## Create an instance of the client

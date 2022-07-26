@@ -1,6 +1,6 @@
 import requests
 
-response = requests.post('http://localhost:5000/playlistgenerator', json={
+response = requests.post('http://localhost:23401/playlistgenerator', json={
     'title': "My playlist", 
     'tracks': [
         "https://open.spotify.com/track/2NtqZmfRIDkXJ2YvY2Kv1F?si=c286783f05554217",

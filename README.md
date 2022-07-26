@@ -6,7 +6,7 @@ Note that the user **must connect to OSU VPN** in order to navigate to the URL t
 As stated above, make sure you are connected to the VPN.
 
 In order to create a playlist the user must send a POST request to the following URL:
-[http://flip1.engr.oregonstate.edu:3138/playlistgenerator](http://flip1.engr.oregonstate.edu:3138/playlistgenerator).
+[http://flip3.engr.oregonstate.edu:23401/playlistgenerator](http://flip1.engr.oregonstate.edu:23401/playlistgenerator).
 
 The POST request must submit JSON data. So, it must have its mimetype set to be application/json. The JSON object that
 is submitted must be formatted as follows:
