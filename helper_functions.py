@@ -25,8 +25,6 @@ def generate_playlist(name, tracks):
     ## Create an instance of the client
     sp = spotipy.Spotify(auth=token)
 
-    # sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(client_id=MY_CLIENT_ID, client_secret=MY_CLIENT_SECRET))
-
     ## Get my User ID
     id = sp.current_user()['id']
 

@@ -74,3 +74,28 @@ url = json_response['link']
 ### Microservice UML Sequence Diagram
 
 ![UML Sequence Diagram](microserviceUML.JPG)
+
+
+### Instructions for self-hosting
+In order to self-host in case of emergencies, clone this repo and install the latest version of python.
+Once python is installed create a python environment for the microservice that has the following packages installed:
+```
+flask
+spotipy
+python-dotenv
+```
+In the root directory create a .env folder with the following variables:
+```
+MY_CLIENT_ID = "YOUR_CLIENT_ID_GOES_HERE
+MY_CLIENT_SECRET = "YOUR_CLIENT_SECRET_GOES_HERE"
+MY_USER_NAME = "YOUR_USER_NAME_GOES_HERE"
+```
+where the client id and secret id are obtained from the spotify developer portal (create a new app if needed).
+In the associated app in the developer portal be sure to add the associated redirect URI that you specify in
+your helper function. From there change all instances of the flip URL to localhost along with the desired port numbers.
+Once all of that is done activate your python environment you've created, navigate to the project root directory
+and run the following command:
+```
+py app.py
+```
+Then you should be good to go!
