@@ -84,7 +84,7 @@ flask
 spotipy
 python-dotenv
 ```
-In the root directory create a .env folder with the following variables:
+In the root directory create a .env file with the following variables:
 ```
 MY_CLIENT_ID = "YOUR_CLIENT_ID_GOES_HERE
 MY_CLIENT_SECRET = "YOUR_CLIENT_SECRET_GOES_HERE"
