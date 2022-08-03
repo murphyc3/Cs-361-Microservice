@@ -2,4 +2,5 @@ env
 .env
 .cache-1244119694
 .cache
-__pycache__/helper_functions.cpython-310.pyc
+__pycache__
+__pycache__/helper_functions.cpython-36.pyc
